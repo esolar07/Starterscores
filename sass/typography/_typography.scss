@@ -9,6 +9,12 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+.site-content{
+	font-size: em(18px);
+	line-height: 1.6em;
+}
+
+
 @import "headings";
 
 @import "copy";
