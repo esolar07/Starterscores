@@ -1,0 +1,56 @@
+
+.site-header{
+  background: $color__header;
+  background-size: cover;
+  .site-branding{
+    text-align: center;
+    .site-title{
+      margin: 1.7em 1em 0;
+      font-family: $font_heading;
+      font-size: em(26px);
+      font-weight: bold;
+      line-height: 1.3em;
+      color: $color__text-header;
+      text-transform: uppercase;
+      word-break: break-word;
+      // breakpoint at 480px
+      @media screen and (min-width: 30em){
+        font-size: em(32px);
+      }
+      :after{
+        content: '';
+        display: block;
+        margin-top: .7em;
+        margin-right: auto;
+        margin-left: auto;
+        border-bottom: solid 1px white;
+        opacity: .5;
+      }
+    }
+    .site-description{
+      margin: 2em 2em 3em;
+      font-size: 110%;
+      color: $color__text-header;
+    }
+  }
+}
+
+.site-logo{
+  position: relative;
+  a{
+    display:  block;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 2em;
+    height: 2em;
+    color: white;
+    text-decoration: none;
+    background: black;
+    border: 2px solid white;
+    z-index: 999;
+    &:hover, &:focus{
+      outline: 2px solid white ;
+    }
+  }
+}

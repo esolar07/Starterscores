@@ -1,0 +1,18 @@
+.site-main{
+  margin: 1.4em;
+  font-size: em(14.4px);
+  line-height: 1.6em;
+  // breakpoint at 480px
+  @media screen and (min-width: 30em){
+    margin: 1.8em;
+  }
+  // breakpoint at 640px
+  @media screen and (min-width: 40em){
+    font-size: em(16px);
+  }
+  // breakpoint at 912px
+  @media screen and (min-width: 57em) {
+    margin: 1.8em auto;
+    max-width: 45em;
+  }
+}
