@@ -21,6 +21,13 @@
  * @uses starterscores_header_style()
  */
 function starterscores_custom_header_setup() {
+	add_theme_support( 'custom-logo', array(
+		'width' => 96,
+		'height' => 96,
+		'flex-width' => false,
+		'flex-height' => false,
+	) );
+
 	add_theme_support( 'custom-header', apply_filters( 'starterscores_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',

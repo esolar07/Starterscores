@@ -634,6 +634,9 @@ a {
 .site-header {
   background: #000;
   background-size: cover; }
+  @media screen and (min-width: 50em) {
+    .site-header {
+      min-height: 4em; } }
   .site-header .site-branding {
     text-align: center; }
     .site-header .site-branding .site-title {
@@ -677,6 +680,16 @@ a {
     z-index: 999; }
     .site-logo a:hover, .site-logo a:focus {
       outline: 2px solid white; }
+      .site-logo a:hover .site-firstletter, .site-logo a:focus .site-firstletter {
+        background: white;
+        color: black; }
+
+.site-firstletter {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3em; }
 
 /*--------------------------------------------------------------
 # Widgets

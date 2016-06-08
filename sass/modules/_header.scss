@@ -2,6 +2,10 @@
 .site-header{
   background: $color__header;
   background-size: cover;
+  // breakpoint at 1200px
+  @media screen and (min-width: 50em){
+    min-height: 4em;
+  }
   .site-branding{
     text-align: center;
     .site-title{
@@ -51,6 +55,19 @@
     z-index: 999;
     &:hover, &:focus{
       outline: 2px solid white ;
+      .site-firstletter{
+        background: white;
+        color: black;
+      }
     }
   }
 }
+
+.site-firstletter{
+  font-family: $font_heading;
+  font-size: em(24px);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3em;
+}
+
