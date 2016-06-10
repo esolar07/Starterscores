@@ -74,42 +74,40 @@
 }
 
 .dropdown-toggle {
-  background-color: transparent;
-  border: 0;
+  position: absolute;
+  height: 27px;
+  width: 27px;
+  top: 12px;
+  right: 6px;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  font-family: 'FontAwesome';
+  background-color: #000;
+  border: 1px solid #fff;
   content: "";
-  height: 42px;
-  padding: 0;
-  position: absolute;
+  color: #fff;
+  /* Stop screen readers from reading the text as capital letters */
   text-transform: lowercase;
-  /* Stop screen readers to read the text as capital letters */
-  top: 3px;
-  right: 0;
-  width: 42px;
   &:after {
-    color: #333;
-    content: "\f431";
-    font-size: 24px;
-    line-height: 42px;
+    content: "\f078";
+  	font-size: 14px;
+  	line-height: 27px;
     position: relative;
     top: 0;
     left: 1px;
-    width: 42px;
+    width: 27px;
   }
   &:hover {
-    background-color: #eaeaea;
-    background-color: rgba(51, 51, 51, 0.1);
+    background-color: #fff;
+  	color: #000;
   }
   &:focus {
-    background-color: #eaeaea;
-    background-color: rgba(51, 51, 51, 0.1);
-    outline: 1px solid #c1c1c1;
-    outline: 1px solid rgba(51, 51, 51, 0.3);
+    background-color: #fff;
+    color: #000;
   }
   &.toggle-on:after {
-    content: "\f432";
+    content: "\f077";
   }
 }
 
@@ -118,6 +116,18 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+}
+
+.menu-toggle{
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+  font-size: em(16px);
+  text-transform: uppercase;
+  color: #fff;
+  background: $color__small__menu;
+  border: solid 2px #fff;
+  z-index: 999;
 }
 
 @media screen and (min-width: 37.5em) {
