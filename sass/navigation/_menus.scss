@@ -67,6 +67,23 @@
     line-height: 1.5;
     margin-top: 0.5em;
   }
+  .toggled{
+    position: fixed;
+    bottom: 0;
+    padding: 1em;
+    z-index: 999;
+    background: #000;
+    ul{
+      max-height: calc(100vh - 8em);
+      overflow: auto;
+      ul{
+        display: none;
+        .toggled-on, .toggled-on > ul{
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 .no-js .main-navigation ul ul {
@@ -112,6 +129,13 @@
 }
 
 
+.nav-menu{
+  padding: 1em;
+  margin-bottom: 3em;
+  background: red;
+}
+
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -128,7 +152,13 @@
   background: $color__small__menu;
   border: solid 2px #fff;
   z-index: 999;
+  transition: all ease-out 400ms;
+  // style added to menu bottom to hide when scrolling down
+  .hide{
+    bottom: -3.5em;
+  }
 }
+
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
@@ -159,3 +189,5 @@
 		width: 50%;
 	}
 }
+
+

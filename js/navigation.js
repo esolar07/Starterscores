@@ -152,12 +152,12 @@
                 previous = direction;
             }
         } else {
-                direction = 'up';
-                if(direction !== previous){
-                    $('.menu-toggle').removeClass('hide');
-                    previous = direction;
-                }
+            direction = 'up';
+            if(direction !== previous){
+                $('.menu-toggle').removeClass('hide');
+                previous = direction;
             }
-            position = $(this).scrollTop();
-        });
+        }
+        position = $(this).scrollTop();
+    });
 } )( jQuery );
