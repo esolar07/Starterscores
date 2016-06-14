@@ -1,21 +1,24 @@
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-    font-family: $font_heading;
-    font-weight: 300;
-    font-size: em(16px);
-	ul {
-      display: none;
-      list-style: none;
-      margin: 0;
-      padding-left: 0;
-    }
-}
-
 
 .main-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+  font-family: $font_heading;
+  font-weight: 300;
+  font-size: em(16px);
+  // break point at 1200px
+  @media screen and (min-width: 50em) {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 3.5em;
+    max-width: 58em;
+    min-height: 3.5em;
+    background-color: #000;
+    background-color: hsla(0, 0%, 0%, .7);
+  }
+
   a {
     display: block;
     padding: 0.8em 0;
@@ -23,29 +26,113 @@
     text-decoration: none;
     color: white;
     font-weight: 400;
-    text-decoration: none;
   	line-height: 1.6em;
+    // break point at 1200px
+    @media screen and (min-width: 50em) {
+      border-bottom: none;
+    }
     &:hover, &:focus {
       background: #fff;
       color: #000;
+      // break point at 1200px
+      @media screen and (min-width: 50em) {
+        background: transparent;
+        color: #fff;
+      	text-decoration: underline;
+      	outline: solid 1px #b3b3b3;
+      }
     }
   }
+
+
   ul {
+    display: none;
     list-style: none;
     margin: 0;
+    padding-left: 0;
+    // break point at 1200px
+    @media screen and (min-width: 50em) {
+      display: block;
+      padding-left: 0;
+      max-height: none;
+      text-align: center;
+    }
+
     ul {
       display: none;
       margin-left: 0.8em;
+      // break point at 1200px
+      @media screen and (min-width: 50em) {
+        outline: 1px solid #333;
+      }
+      li:last-child a{
+        @media screen and (min-width: 50em) {
+          border-bottom: none;
+        }
+      }
+
+      ul{
+
+        a{
+          // break point at 1200px
+          @media screen and (min-width: 50em) {
+            padding-left: 2em;
+          }
+        }
+        .toggled-on{
+          // break point at 1200px
+          @media screen and (min-width: 50em) {
+            position: relative;
+          }
+        }
+      }
+      .toggled-on{
+        // break point at 1200px
+        @media screen and (min-width: 50em) {
+          position: absolute;
+          width: 12em;
+          display: block;
+          z-index: 10;
+          margin-left: 0;
+          background: #000;
+        }
+      }
     }
+
     .toggled-on {
       display: block;
     }
   }
+
+
   li {
     border-top: 1px solid #eaeaea;
     border-top: 1px solid rgba(51, 51, 51, 0.1);
     position: relative;
+    // break point at 1200px
+    @media screen and (min-width: 50em) {
+      // Display the menu items in a horizontal order
+      display: inline-block;
+    }
+    li{
+      // break point at 1200px
+      @media screen and (min-width: 50em) {
+        display: block;
+        text-align: left;
+      }
+      a:hover, a:focus {
+        // break point at 1200px
+        @media screen and (min-width: 50em) {
+          background: #eee;
+          color: #000;
+          text-decoration: none;
+        }
+      }
+    }
+
   }
+
+
   .current-menu-item > a, .current-menu-ancestor > a {
     font-weight: 700;
   }
@@ -62,20 +149,36 @@
     color: rgba(51, 51, 51, 0.7);
     font-family: "Noto Sans", sans-serif;
     font-size: 12px;
-    font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.5;
     margin-top: 0.5em;
   }
-  .toggled{
+  .toggled {
     position: fixed;
     bottom: 0;
     padding: 1em;
-    z-index: 999;
-    background: #000;
+    z-index: 1;
+    // break point at 1200px
+    @media screen and (min-width: 50em) {
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0 3.5em;
+      max-width: 58em;
+      min-height: 3.5em;
+      background-color: #000;
+      background-color: hsla(0, 0%, 0%, .7);
+    }
     ul{
       max-height: calc(100vh - 8em);
-      overflow: auto;
+      overflow-y: auto;
+      // break point at 1200px
+      @media screen and (min-width: 50em) {
+        padding-left: 0;
+        max-height: none;
+        text-align: center;
+        overflow-y: visible;
+      }
       ul{
         display: none;
         .toggled-on, .toggled-on > ul{
@@ -86,8 +189,23 @@
   }
 }
 
+.nav-menu{
+  padding: 1em;
+  margin-bottom: 3em;
+  background: #000;
+  @media screen and (min-width: 50em) {
+    padding: .3em 0 0 0;
+    background-color: transparent;
+  }
+}
+
+
 .no-js .main-navigation ul ul {
   display: block;
+}
+
+.toggled .menu-toggle .hide{
+  bottom: 1em;
 }
 
 .dropdown-toggle {
@@ -106,6 +224,12 @@
   color: #fff;
   /* Stop screen readers from reading the text as capital letters */
   text-transform: lowercase;
+  // break point at 1200px
+  @media screen and (min-width: 50em) {
+    top: 11px;
+    right: 12px;
+    border: none;
+  }
   &:after {
     content: "\f078";
   	font-size: 14px;
@@ -114,6 +238,11 @@
     top: 0;
     left: 1px;
     width: 27px;
+    // break point at 1200px
+    @media screen and (min-width: 50em) {
+      line-height: 27px;
+      width: 27px;
+    }
   }
   &:hover {
     background-color: #fff;
@@ -126,13 +255,6 @@
   &.toggle-on:after {
     content: "\f077";
   }
-}
-
-
-.nav-menu{
-  padding: 1em;
-  margin-bottom: 3em;
-  background: red;
 }
 
 
@@ -153,6 +275,10 @@
   border: solid 2px #fff;
   z-index: 999;
   transition: all ease-out 400ms;
+  // break point at 1200px
+  @media screen and (min-width: 50em) {
+    display: none;
+  }
   // style added to menu bottom to hide when scrolling down
   .hide{
     bottom: -3.5em;
