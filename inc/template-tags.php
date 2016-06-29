@@ -37,12 +37,15 @@ function starterscores_posted_on() {
 	// Display author avatar if auther has Gravator
 	$author_id = get_the_author_meta('ID');
     if (starterscorees_validate_gravatar( $author_id)){
+		echo '<div class="meta-content has-avatar">';
         echo '<div class="author-avatar">' . get_avatar( $author_id ) . '</div>';
-    }
+    } else {
+		echo '<div class="meta-content">';
+	}
 
 
 
-	echo '<span class="byline"> ' . $byline . '</span>''<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	echo '<span class="byline"> ' . $byline . '</span> <span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */

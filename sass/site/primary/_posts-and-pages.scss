@@ -6,6 +6,65 @@
 	margin: 0 0 1.5em;
 }
 
+
+.entry-meta{
+	margin-right: -1.473684210526316em;
+	margin-left:  -1.473684210526316em;
+	padding: 2em 1.473684210526316em;
+	font-family: $font_heading, sans-serif;
+	font-size: 95%;
+	font-style: italic;
+	text-align: center;
+	background: $color-post-meta-bg;
+    // break point at 480px
+    @media screen and (min-width: 30em) {
+      margin-right: -1.894736842105263em;
+      margin-left: -1.894736842105263em;
+    }
+    // break point at 912px
+    @media screen and (min-width: 57em) {
+      position: relative;
+      width: 100%;
+      width: 100vw;
+      left: 0;
+      left: calc((-100vw + 52.2em) / 2);
+      overflow: hidden;
+    }
+}
+
+.has-avatar{
+	// break point at 1200px
+	@media screen and (min-width: 50em) {
+		display: inline-block;
+		width: 20em;
+		text-align: left;
+	}
+}
+
+.author-avatar{
+	margin-right: auto;
+	margin-bottom:  1em;
+	margin-left: auto;
+	height: 50px;
+	width: 50px;
+	// break point at 1200px
+	@media screen and (min-width: 50em) {
+		float: left;
+		margin-right: 1.5em;
+		margin-bottom: 0;
+		height: 70px;
+		width: 70px;
+	}
+	img{
+		border-radius: 50%;
+	}
+}
+
+.byline, .posted-on, .entry-meta .comment-link{
+	display: block;
+	padding: 0;
+}
+
 .byline,
 .updated:not(.published){
 	display: none;
