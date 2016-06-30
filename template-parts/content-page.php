@@ -14,6 +14,15 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
+	<?php
+		if( has_excerpt( $post->ID ) ) {
+            echo '<div class="deck">';
+            echo '<p>' . get_the_excerpt() . '</p>';
+            echo '</div><!-- .deck -->';
+        }
+	?>
+
+
 	<div class="entry-content">
 		<?php
 			the_content();
