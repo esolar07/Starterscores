@@ -472,11 +472,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #000; }
   a:visited {
-    color: purple; }
+    color: #000; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #000; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -936,6 +936,47 @@ a {
       left: 0;
       left: calc((-100vw + 52.2em) / 2);
       overflow: hidden; } }
+  .entry-meta a {
+    text-decoration: none; }
+
+.entry-content a, .entry-summary a {
+  text-decoration: none;
+  border-bottom: 2px solid #c3c3c3; }
+  .entry-content a:hover, .entry-summary a:hover {
+    border-bottom: 3px solid #c3c3c3;
+    box-shadow: inset 0 -3px 0 #c3c3c3; }
+  .entry-content a:focus, .entry-summary a:focus {
+    border-bottom: 3px solid #c3c3c3;
+    box-shadow: inset 0 -3px 0 #c3c3c3; }
+
+.entry-footer a {
+  text-decoration: none; }
+  .entry-footer a:hover {
+    border-bottom: 2px solid #000; }
+  .entry-footer a:focus {
+    border-bottom: 2px solid #000; }
+
+.entry-title {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-align: center;
+  color: #000;
+  line-height: 1.3em;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
+  .entry-title a {
+    color: inherit;
+    text-decoration: none; }
+    .entry-title a:hover {
+      text-decoration: underline; }
+    .entry-title a:focus {
+      text-decoration: underline; }
+  @media screen and (min-width: 40em) {
+    .entry-title {
+      margin-top: 1.5em;
+      font-size: 2.8em;
+      line-height: 1.3em; } }
 
 @media screen and (min-width: 50em) {
   .has-avatar {
