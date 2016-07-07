@@ -21,6 +21,21 @@ blockquote, q {
 	}
 }
 
+blockquote{
+	position: relative;
+	margin: 1.5em 0 1.5em 2em;
+	font-size: 1.5em;
+	line-height: 1.4em;
+	&:before{
+		content: "\f10d";
+		position: absolute;
+		left: -2em;
+		font-family: 'FontAwesome';
+		color: #ededed;
+	}
+}
+
+
 hr {
 	background-color: $color__background-hr;
 	border: 0;
