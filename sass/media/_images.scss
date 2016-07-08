@@ -3,7 +3,28 @@ img{
     margin-top: 2em;
     margin-bottom: 2em;
   }
-  .alignright, .alignleft{
+  .alignright{
     margin-bottom: 1.5em;
+    // break point at 800px
+    @media screen and (min-width: 50em){
+      margin-right: -1.5em;
+    }
+  }
+  .alignleft{
+    margin-bottom: 1.5em;
+    // break point at 800px
+    @media screen and (min-width: 50em){
+      margin-left: -1.5em;
+    }
+  }
+}
+
+.centered-image{
+  max-width: calc(100% + 2.8em);
+  margin: 1.5em -1.4em;
+  // break point at 480px
+  @media screen and (min-width: 30em){
+    max-width: calc(100% + 3.6em);
+    margin: 1.5em -1.8em;
   }
 }

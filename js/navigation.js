@@ -160,4 +160,6 @@
         }
         position = $(this).scrollTop();
     });
+
+	
 } )( jQuery );
