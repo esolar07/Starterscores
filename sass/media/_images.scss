@@ -19,6 +19,22 @@ img{
   }
 }
 
+.wp-caption{
+  .alignright{
+    // break point at 800px
+    @media screen and (min-width: 50em) {
+      margin-right: -15em;
+    }
+  }
+  .alignleft{
+    // break point at 800px
+    @media screen and (min-width: 50em) {
+      margin-left: -1.5em;
+    }
+  }
+}
+
+
 .centered-image{
   max-width: calc(100% + 2.8em);
   margin: 1.5em -1.4em;

@@ -123,7 +123,7 @@ function starterscores_scripts() {
 	wp_enqueue_style( 'starterscores-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
 
 
-	wp_enqueue_script( 'starterscores-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery' ), '20151215', true );
+	wp_enqueue_script( 'starterscores-navigation', get_template_directory_uri() . '/js/function.js', array('jquery' ), '20151215', true );
 	wp_localize_script( 'starterscores-navigation', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'starterscores' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'starterscores' ) . '</span>',
