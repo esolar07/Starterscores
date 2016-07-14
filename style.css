@@ -733,6 +733,61 @@ a {
   width: 50%; }
 
 /*--------------------------------------------------------------
+## Other Navigation
+--------------------------------------------------------------*/
+.post-navigation {
+  padding: 2em 0;
+  font-family: "Fira Sans", sans-serif;
+  text-align: left;
+  overflow: hidden; }
+  @media screen and (min-width: 50em) {
+    .post-navigation {
+      padding: 2em 3em; } }
+  .post-navigation a {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    border: 1px solid #c3c3c3;
+    text-decoration: none; }
+    .post-navigation a:hover, .post-navigation a:focus {
+      border-color: #000000; }
+      .post-navigation a:hover .post-title, .post-navigation a:focus .post-title {
+        text-decoration: underline; }
+  .post-navigation .post-title {
+    font-size: 1.1875em;
+    font-weight: 700; }
+  @media screen and (min-width: 30em) {
+    .post-navigation .nav-previous {
+      display: flex;
+      align-items: stretch;
+      float: left;
+      width: 48%; } }
+  @media screen and (min-width: 30em) {
+    .post-navigation .nav-previous .nav-next {
+      display: flex;
+      align-items: stretch;
+      float: right;
+      width: 48%;
+      text-align: right; } }
+
+.nav-links {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 .4em; }
+  @media screen and (min-width: 30em) {
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 0; } }
+
+.nav-previous {
+  padding-bottom: 1em; }
+  @media screen and (min-width: 30em) {
+    .nav-previous {
+      padding-bottom: 0; } }
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
@@ -1044,8 +1099,70 @@ a {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-area {
+  margin: 4em 0; }
+  @media screen and (min-width: 40em) {
+    .comments-area {
+      margin: 4em 1em; } }
+  @media screen and (min-width: 50em) {
+    .comments-area {
+      margin: 4em 3em; } }
+
+.comments-title {
+  margin-bottom: 2em;
+  font-size: 2em;
+  text-align: center; }
+
+.comment-list {
+  margin: 0;
+  padding: 0; }
+  .comment-list ol {
+    list-style-type: none; }
+
+.comment-body {
+  margin-bottom: 3em;
+  border-bottom: 3em; }
+
+.comment-meta {
+  position: relative;
+  margin-left: 70px;
+  font-family: "Fira Sans", sans-serif;
+  font-style: italic;
+  font-size: 80%; }
+  @media screen and (min-width: 30em) {
+    .comment-meta {
+      margin-left: 80px;
+      font-size: 90%; } }
+
+.comment .avatar {
+  position: relative;
+  top: -5px;
+  left: -70px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px; }
+  @media screen and (min-width: 30em) {
+    .comment .avatar {
+      top: -7px;
+      left: -80px;
+      width: 60px;
+      height: 60px; } }
+
+.children {
+  margin-left: 1em;
+  padding-left: 0; }
+  @media screen and (min-width: 30em) {
+    .children {
+      margin-left: 2em; } }
+  @media screen and (min-width: 50em) {
+    .children {
+      margin-left: 3em; } }
+
 .comment-content a {
   word-wrap: break-word; }
+  @media screen and (min-width: 30em) {
+    .comment-content a {
+      margin-left: 80px; } }
 
 .bypostauthor {
   display: block; }

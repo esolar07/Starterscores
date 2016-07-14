@@ -1,5 +1,82 @@
+.comments-area{
+	margin: 4em 0;
+	// break point at 640px
+	@media screen and (min-width: 40em){
+		margin: 4em 1em;
+	}
+    // break point at 800px
+    @media screen and (min-width: 50em){
+      margin: 4em 3em;
+    }
+}
+
+.comments-title{
+  margin-bottom: 2em;
+  font-size: 2em;
+  text-align: center;
+}
+
+.comment-list{
+  margin: 0;
+  padding: 0;
+  ol{
+    list-style-type: none;
+  }
+}
+
+.comment-body{
+  margin-bottom: 3em;
+  border-bottom: 3em;
+}
+
+.comment-meta{
+  position: relative;
+  margin-left: 70px;
+  font-family: $font_heading;
+  font-style: italic;
+  font-size: 80%;
+  // break point at 480px
+  @media screen and (min-width: 30em){
+    margin-left: 80px;
+    font-size: 90%;
+  }
+}
+
+.comment .avatar{
+  position: relative;
+  top: -5px;
+  left: -70px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  // break point at 480px
+  @media screen and (min-width: 30em){
+    top: -7px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.children{
+  margin-left: 1em;
+  padding-left: 0;
+  // break point at 480px
+  @media screen and (min-width: 30em){
+    margin-left: 2em;
+  }
+  // break point at 800px
+  @media screen and (min-width: 50em){
+    margin-left: 3em;
+  }
+}
+
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
+  // break point at 480px
+  @media screen and (min-width: 30em){
+    margin-left: 80px;
+  }
 }
 .bypostauthor {
 	display: block;
