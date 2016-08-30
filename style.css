@@ -605,7 +605,7 @@ a {
     position: fixed;
     bottom: 0;
     padding: 1em;
-    z-index: 1; }
+    z-index: 5; }
     @media screen and (min-width: 50em) {
       .main-navigation .toggled {
         position: relative;
@@ -703,11 +703,11 @@ a {
   border: solid 2px #fff;
   z-index: 999;
   transition: all ease-out 400ms; }
+  .menu-toggle .hide {
+    bottom: -2.5em; }
   @media screen and (min-width: 50em) {
     .menu-toggle {
       display: none; } }
-  .menu-toggle .hide {
-    bottom: -3.5em; }
 
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
@@ -887,6 +887,8 @@ a {
       color: #fff;
       text-transform: uppercase;
       word-break: break-word; }
+      .site-header .site-branding .site-title a {
+        color: inherit; }
       @media screen and (min-width: 30em) {
         .site-header .site-branding .site-title {
           font-size: 2em; } }

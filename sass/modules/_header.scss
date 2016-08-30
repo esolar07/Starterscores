@@ -17,6 +17,9 @@
       color: $color__text-header;
       text-transform: uppercase;
       word-break: break-word;
+	  a{
+		color:inherit;
+	  }
       // breakpoint at 480px
       @media screen and (min-width: 30em){
         font-size: em(32px);

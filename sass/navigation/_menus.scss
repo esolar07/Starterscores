@@ -157,7 +157,7 @@
     position: fixed;
     bottom: 0;
     padding: 1em;
-    z-index: 1;
+    z-index: 5;
     // break point at 1200px
     @media screen and (min-width: 50em) {
       position: relative;
@@ -275,13 +275,13 @@
   border: solid 2px #fff;
   z-index: 999;
   transition: all ease-out 400ms;
+  // style added to menu bottom to hide when scrolling down
+  .hide{
+    bottom: -2.5em;
+  }
   // break point at 1200px
   @media screen and (min-width: 50em) {
     display: none;
-  }
-  // style added to menu bottom to hide when scrolling down
-  .hide{
-    bottom: -3.5em;
   }
 }
 
