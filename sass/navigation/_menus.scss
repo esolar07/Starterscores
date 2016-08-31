@@ -153,46 +153,49 @@
     line-height: 1.5;
     margin-top: 0.5em;
   }
-  .toggled {
-    position: fixed;
-    bottom: 0;
-    padding: 1em;
-    z-index: 5;
-    // break point at 1200px
-    @media screen and (min-width: 50em) {
-      position: relative;
-      margin-right: auto;
-      margin-left: auto;
-      padding: 0 3.5em;
-      max-width: 58em;
-      min-height: 3.5em;
-      background-color: #000;
-      background-color: hsla(0, 0%, 0%, .7);
-    }
-    ul{
-      max-height: calc(100vh - 8em);
-      overflow-y: auto;
-      // break point at 1200px
-      @media screen and (min-width: 50em) {
-        padding-left: 0;
-        max-height: none;
-        text-align: center;
-        overflow-y: visible;
-      }
-      ul{
-        display: none;
-        .toggled-on, .toggled-on > ul{
-          display: block;
-        }
-      }
-    }
-  }
 }
+
+
+/* mobile hover menu */
+.toggled {
+	position: fixed;
+	bottom: 0;
+	padding: 1em;
+	z-index: 999;
+	// break point at 1200px
+	@media screen and (min-width: 50em) {
+	  position: relative;
+	  margin-right: auto;
+	  margin-left: auto;
+	  padding: 0 3.5em;
+	  max-width: 58em;
+	  min-height: 3.5em;
+	  background-color: #000;
+	  background-color: hsla(0, 0%, 0%, .7);
+	}
+	ul{
+	  max-height: calc(100vh - 8em);
+	  overflow-y: auto;
+	  // break point at 1200px
+	  @media screen and (min-width: 50em) {
+		padding-left: 0;
+		max-height: none;
+		text-align: center;
+		overflow-y: visible;
+	  }
+	  ul{
+		display: none;
+		.toggled-on, .toggled-on > ul{
+		  display: block;
+		}
+	  }
+	}
+ }
 
 .nav-menu{
   padding: 1em;
   margin-bottom: 3em;
-  background: #000;
+  background: rgba(black, .5);
   @media screen and (min-width: 50em) {
     padding: .3em 0 0 0;
     background-color: transparent;
@@ -204,9 +207,11 @@
   display: block;
 }
 
+/*
 .toggled .menu-toggle .hide{
   bottom: 1em;
 }
+*/
 
 .dropdown-toggle {
   position: absolute;
@@ -275,16 +280,16 @@
   border: solid 2px #fff;
   z-index: 999;
   transition: all ease-out 400ms;
-  // style added to menu bottom to hide when scrolling down
-  .hide{
-    bottom: -2.5em;
-  }
   // break point at 1200px
   @media screen and (min-width: 50em) {
     display: none;
   }
 }
 
+// style added to menu bottom to hide when scrolling down
+.hide{
+bottom: -2.5em !important;
+}
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
