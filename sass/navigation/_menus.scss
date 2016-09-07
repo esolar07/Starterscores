@@ -24,13 +24,14 @@
   
   
   a {
-    display: block;
-    padding: 0.8em 0;
+    display: relative;
+    padding: 0.8em 1em;
     position: relative;
     text-decoration: none;
     color: white;
     font-weight: 400;
   	line-height: 1.6em;
+	border-bottom: 1px solid white;
     // break point at 1200px
     @media screen and (min-width: 50em) {
       border-bottom: none;
@@ -52,15 +53,11 @@
   ul {
     display: none;
     list-style: none;
-    margin: 0;
-	padding-right: 0;
-	padding-left: 0;
+    margin-left: 0;
     // break point at 1200px
     @media screen and (min-width: 50em) {
-      display: block;
       padding-left: 0;
       max-height: none;
-	  min-height: 4em;
       text-align: center;
     }
 
@@ -73,7 +70,7 @@
       }
       li:last-child a{
         @media screen and (min-width: 50em) {
-          border-bottom: none;
+          border-bottom: 1px solid white;
         }
       }
 
@@ -93,14 +90,15 @@
         }
       }
       .toggled-on{
-        // break point at 1200px
-        @media screen and (min-width: 50em) {
-          position: absolute;
-          width: 12em;
-          display: block;
-          z-index: 10;
-          margin-left: 0;
-          background: #000;
+        display: block;
+		// break point at 1200px
+		@media screen and (min-width: 50em) {
+			position: absolute;
+			display: block;
+			margin-left: 0;
+			width: 12em;
+			z-index: 10;
+			background: #000;
         }
       }
     }
@@ -112,13 +110,17 @@
 
 
   li {
-    border-top: 1px solid #eaeaea;
+	position: relative;
+	border-top: 1px solid #eaeaea;
     border-top: 1px solid rgba(51, 51, 51, 0.1);
-    position: relative;
+	&:last-child a {
+		border-bottom: none;
+	}
     // break point at 1200px
     @media screen and (min-width: 50em) {
       // Display the menu items in a horizontal order
       display: inline-block;
+	  border: none;
     }
     li{
       // break point at 1200px
@@ -147,9 +149,10 @@
       border-top: 0;
     }
   }
-  .menu-item-has-children > a {
+  .menu-item-has-children > a,  .page-item-has-children > a{
     padding-right: 48px;
   }
+  
   .menu-item-description {
     color: #707070;
     color: rgba(51, 51, 51, 0.7);
@@ -163,16 +166,16 @@
 
 
 /* mobile hover menu */
-.toggled {
+.main-navigation .toggled {
 	position: fixed;
 	bottom: 0;
 	padding: 1em;
 	z-index: 999;
 	// break point at 1200px
 	@media screen and (min-width: 50em) {
+	  /* Position the menu in the header */
 	  position: relative;
-	  margin-right: auto;
-	  margin-left: auto;
+	  margin: 0 auto;
 	  padding: 0 3.5em;
 	  max-width: 58em;
 	  min-height: 3.5em;
@@ -213,11 +216,6 @@
   display: block;
 }
 
-/*
-.toggled .menu-toggle .hide{
-  bottom: 1em;
-}
-*/
 
 .dropdown-toggle {
   position: absolute;
@@ -286,16 +284,20 @@
   border: solid 2px #fff;
   z-index: 999;
   transition: all ease-out 400ms;
+  &:hover, &:focus{
+	text-decoration: underline;
+  }
   // break point at 1200px
   @media screen and (min-width: 50em) {
     display: none;
   }
+  // style added to menu bottom to hide when scrolling down
+	.hide{
+	bottom: -2.5em !important;
+	}
 }
 
-// style added to menu bottom to hide when scrolling down
-.hide{
-bottom: -2.5em !important;
-}
+
 
 
 
