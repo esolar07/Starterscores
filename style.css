@@ -500,7 +500,6 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
   width: 100%;
   font-family: "Fira Sans", sans-serif;
   font-weight: 300;
@@ -516,14 +515,13 @@ a {
       background-color: #000;
       background-color: rgba(0, 0, 0, 0.7); } }
   .main-navigation a {
-    display: relative;
-    padding: 0.8em 1em;
     position: relative;
+    display: block;
+    padding: 0.8em 1em;
     text-decoration: none;
     color: white;
     font-weight: 400;
-    line-height: 1.6em;
-    border-bottom: 1px solid white; }
+    line-height: 1.6em; }
     @media screen and (min-width: 50em) {
       .main-navigation a {
         border-bottom: none; } }
@@ -534,7 +532,6 @@ a {
         .main-navigation a:hover, .main-navigation a:focus {
           background: transparent;
           color: #fff;
-          text-decoration: underline;
           outline: solid 1px #b3b3b3; } }
   .main-navigation ul {
     display: none;
@@ -542,24 +539,24 @@ a {
     margin-left: 0; }
     @media screen and (min-width: 50em) {
       .main-navigation ul {
+        display: block;
         padding-left: 0;
         max-height: none;
         text-align: center; } }
+    .main-navigation ul .toggled-on {
+      display: block; }
+    .main-navigation ul li:last-child a {
+      border-bottom: none; }
     .main-navigation ul ul {
       display: none;
       margin-left: 0.8em; }
       @media screen and (min-width: 50em) {
         .main-navigation ul ul {
+          display: none;
           outline: 1px solid #333; } }
       @media screen and (min-width: 50em) {
         .main-navigation ul ul li:last-child a {
           border-bottom: 1px solid white; } }
-      @media screen and (min-width: 50em) {
-        .main-navigation ul ul ul a {
-          padding-left: 2em; } }
-      @media screen and (min-width: 50em) {
-        .main-navigation ul ul ul .toggled-on {
-          position: relative; } }
       .main-navigation ul ul .toggled-on {
         display: block; }
         @media screen and (min-width: 50em) {
@@ -568,16 +565,20 @@ a {
             display: block;
             margin-left: 0;
             width: 12em;
-            z-index: 10;
+            z-index: 999;
             background: #000; } }
-    .main-navigation ul .toggled-on {
-      display: block; }
+        .main-navigation ul ul .toggled-on ul {
+          display: block; }
+      @media screen and (min-width: 50em) {
+        .main-navigation ul ul ul a {
+          padding-left: 2em; } }
+      @media screen and (min-width: 50em) {
+        .main-navigation ul ul ul .toggled-on {
+          position: relative; } }
   .main-navigation li {
     position: relative;
     border-top: 1px solid #eaeaea;
     border-top: 1px solid rgba(51, 51, 51, 0.1); }
-    .main-navigation li:last-child a {
-      border-bottom: none; }
     @media screen and (min-width: 50em) {
       .main-navigation li {
         display: inline-block;
@@ -593,10 +594,8 @@ a {
         text-decoration: none; } }
   .main-navigation .current-menu-item > a, .main-navigation .current-menu-ancestor > a {
     font-weight: 700; }
-  .main-navigation .nav-menu > ul > li:first-child, .main-navigation .nav-menu > li:first-child {
+  .main-navigation .nav-menu > ul > li:first-child, .main-navigation .nav-menu > ul > li:first-child {
     border-top: 0; }
-  .main-navigation .menu-item-has-children > a, .main-navigation .page-item-has-children > a {
-    padding-right: 48px; }
   .main-navigation .menu-item-description {
     color: #707070;
     color: rgba(51, 51, 51, 0.7);
@@ -606,14 +605,18 @@ a {
     line-height: 1.5;
     margin-top: 0.5em; }
 
+/* adds spacing inbetween menu options text and dropdowns */
+.menu-item-has-children > a, .page_item_has_children > a {
+  padding-right: 48px; }
+
 /* mobile hover menu */
-.main-navigation .toggled {
+.toggled {
   position: fixed;
   bottom: 0;
   padding: 1em;
   z-index: 999; }
   @media screen and (min-width: 50em) {
-    .main-navigation .toggled {
+    .toggled {
       /* Position the menu in the header */
       position: relative;
       margin: 0 auto;
@@ -622,46 +625,51 @@ a {
       min-height: 3.5em;
       background-color: #000;
       background-color: rgba(0, 0, 0, 0.7); } }
-  .main-navigation .toggled ul {
+  .toggled ul {
     max-height: calc(100vh - 8em);
     overflow-y: auto; }
     @media screen and (min-width: 50em) {
-      .main-navigation .toggled ul {
+      .toggled ul {
         padding-left: 0;
         max-height: none;
         text-align: center;
         overflow-y: visible; } }
-    .main-navigation .toggled ul ul {
+    .toggled ul ul {
       display: none; }
-      .main-navigation .toggled ul ul .toggled-on, .main-navigation .toggled ul ul .toggled-on > ul {
+      .toggled ul ul .toggled-on, .toggled ul ul .toggled-on > ul {
         display: block; }
 
 .nav-menu {
   padding: 1em;
-  margin-bottom: 3em;
-  background: rgba(0, 0, 0, 0.5); }
+  margin-bottom: 0em; }
   @media screen and (min-width: 50em) {
     .nav-menu {
       padding: .3em 0 0 0;
       background-color: transparent; } }
+  .nav-menu ul {
+    background: black; }
+    @media screen and (min-width: 50em) {
+      .nav-menu ul {
+        background-color: transparent; } }
 
 .no-js .main-navigation ul ul {
   display: block; }
 
 .dropdown-toggle {
   position: absolute;
-  height: 27px;
-  width: 27px;
   top: 12px;
   right: 6px;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  padding: 0;
+  height: 27px;
+  width: 27px;
   font-family: 'FontAwesome';
+  color: #fff;
   background-color: #000;
   border: 1px solid #fff;
   content: "";
-  color: #fff;
   /* Stop screen readers from reading the text as capital letters */
   text-transform: lowercase; }
   @media screen and (min-width: 50em) {
@@ -671,20 +679,17 @@ a {
       border: none; } }
   .dropdown-toggle:after {
     content: "\f078";
-    font-size: 14px;
-    line-height: 27px;
     position: relative;
     top: 0;
     left: 1px;
+    font-size: 14px;
+    line-height: 27px;
     width: 27px; }
     @media screen and (min-width: 50em) {
       .dropdown-toggle:after {
         line-height: 27px;
         width: 27px; } }
-  .dropdown-toggle:hover {
-    background-color: #fff;
-    color: #000; }
-  .dropdown-toggle:focus {
+  .dropdown-toggle:hover, .dropdown-toggle:focus {
     background-color: #fff;
     color: #000; }
   .dropdown-toggle.toggle-on:after {

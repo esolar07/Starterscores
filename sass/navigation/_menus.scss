@@ -4,7 +4,6 @@
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
   width: 100%;
   font-family: $font_heading;
   font-weight: 300;
@@ -24,14 +23,13 @@
   
   
   a {
-    display: relative;
+	position: relative;
+    display: block;
     padding: 0.8em 1em;
-    position: relative;
     text-decoration: none;
     color: white;
     font-weight: 400;
   	line-height: 1.6em;
-	border-bottom: 1px solid white;
     // break point at 1200px
     @media screen and (min-width: 50em) {
       border-bottom: none;
@@ -43,7 +41,6 @@
       @media screen and (min-width: 50em) {
         background: transparent;
         color: #fff;
-      	text-decoration: underline;
       	outline: solid 1px #b3b3b3;
       }
     }
@@ -56,16 +53,24 @@
     margin-left: 0;
     // break point at 1200px
     @media screen and (min-width: 50em) {
+	  display: block;
       padding-left: 0;
       max-height: none;
       text-align: center;
     }
+	.toggled-on {
+      display: block;
+    }
+	li:last-child a {
+		border-bottom: none;
+	}
 
     ul {
       display: none;
       margin-left: 0.8em;
       // break point at 1200px
       @media screen and (min-width: 50em) {
+		display: none;
         outline: 1px solid #333;
       }
       li:last-child a{
@@ -73,9 +78,23 @@
           border-bottom: 1px solid white;
         }
       }
+	  .toggled-on{
+        display: block;
+		// break point at 1200px
+		@media screen and (min-width: 50em) {
+			position: absolute;
+			display: block;
+			margin-left: 0;
+			width: 12em;
+			z-index: 999;
+			background: #000;
+        }
+		ul{
+			display: block;
+		}
+      }
 
       ul{
-
         a{
           // break point at 1200px
           @media screen and (min-width: 50em) {
@@ -89,22 +108,6 @@
           }
         }
       }
-      .toggled-on{
-        display: block;
-		// break point at 1200px
-		@media screen and (min-width: 50em) {
-			position: absolute;
-			display: block;
-			margin-left: 0;
-			width: 12em;
-			z-index: 10;
-			background: #000;
-        }
-      }
-    }
-
-    .toggled-on {
-      display: block;
     }
   }
 
@@ -112,10 +115,7 @@
   li {
 	position: relative;
 	border-top: 1px solid #eaeaea;
-    border-top: 1px solid rgba(51, 51, 51, 0.1);
-	&:last-child a {
-		border-bottom: none;
-	}
+	border-top: 1px solid rgba(51, 51, 51, 0.1);
     // break point at 1200px
     @media screen and (min-width: 50em) {
       // Display the menu items in a horizontal order
@@ -144,13 +144,12 @@
   .current-menu-item > a, .current-menu-ancestor > a {
     font-weight: 700;
   }
-  .nav-menu > {
-    ul > li:first-child, li:first-child {
+  .nav-menu {
+    & > ul {
+       & > li:first-child, & > li:first-child {
       border-top: 0;
+		}
     }
-  }
-  .menu-item-has-children > a,  .page-item-has-children > a{
-    padding-right: 48px;
   }
   
   .menu-item-description {
@@ -164,9 +163,13 @@
   }
 }
 
+/* adds spacing inbetween menu options text and dropdowns */
+.menu-item-has-children > a,  .page_item_has_children > a{
+	padding-right: 48px;
+}
 
 /* mobile hover menu */
-.main-navigation .toggled {
+.toggled {
 	position: fixed;
 	bottom: 0;
 	padding: 1em;
@@ -203,11 +206,16 @@
 
 .nav-menu{
   padding: 1em;
-  margin-bottom: 3em;
-  background: rgba(black, .5);
+  margin-bottom: 0em;
   @media screen and (min-width: 50em) {
     padding: .3em 0 0 0;
     background-color: transparent;
+  }
+  ul{
+	background: black;
+	@media screen and (min-width: 50em) {
+		background-color: transparent;
+	}
   }
 }
 
@@ -219,18 +227,19 @@
 
 .dropdown-toggle {
   position: absolute;
-  height: 27px;
-  width: 27px;
   top: 12px;
   right: 6px;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  padding: 0;
+  height: 27px;
+  width: 27px;
   font-family: 'FontAwesome';
+  color: #fff;
   background-color: #000;
   border: 1px solid #fff;
   content: "";
-  color: #fff;
   /* Stop screen readers from reading the text as capital letters */
   text-transform: lowercase;
   // break point at 1200px
@@ -241,11 +250,11 @@
   }
   &:after {
     content: "\f078";
-  	font-size: 14px;
-  	line-height: 27px;
-    position: relative;
+	position: relative;
     top: 0;
     left: 1px;
+  	font-size: 14px;
+  	line-height: 27px;
     width: 27px;
     // break point at 1200px
     @media screen and (min-width: 50em) {
@@ -253,13 +262,9 @@
       width: 27px;
     }
   }
-  &:hover {
+  &:hover, &:focus {
     background-color: #fff;
   	color: #000;
-  }
-  &:focus {
-    background-color: #fff;
-    color: #000;
   }
   &.toggle-on:after {
     content: "\f077";
