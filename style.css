@@ -42,6 +42,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Footer
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -943,9 +944,38 @@ a {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
+  padding: 1.8em;
+  background: #fff;
   /* Make sure select elements fit in widgets. */ }
+  @media screen and (min-width: 45em) {
+    .widget {
+      float: left;
+      margin: 0 .9em 1.8em;
+      width: 300px; } }
+  .widget ul, .widget ol {
+    margin: 0;
+    padding: .7em 0 0;
+    font-family: "Fira Sans", sans-serif;
+    list-style-type: none; }
   .widget select {
     max-width: 100%; }
+
+.widget-title {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  font-size: 1em;
+  text-transform: uppercase; }
+
+#secondary {
+  position: relative;
+  padding: 1.8em 1.4em 0;
+  background: #ededed; }
+  @media screen and (min-width: 45em) {
+    #secondary {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1.8em; } }
 
 /*--------------------------------------------------------------
 # Content
@@ -1304,5 +1334,17 @@ img .alignleft {
     .centered-image {
       max-width: calc(100% + 3.6em);
       margin: 1.5em -1.8em; } }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+  padding: 6em 1em;
+  font-family: "Fira Sans", sans-serif;
+  text-align: center;
+  color: white;
+  background: black; }
+  .site-footer a {
+    color: white; }
 
 /*# sourceMappingURL=style.css.map */

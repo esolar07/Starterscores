@@ -1,8 +1,40 @@
 .widget {
 	margin: 0 0 1.5em;
-
+	padding: 1.8em;
+	background: #fff;
+	@media screen and (min-width: 45em){
+		float: left;
+		margin: 0 .9em 1.8em;
+		width: 300px;
+	}
+	ul, ol{
+		margin:0;
+		padding: .7em 0 0;
+		font-family: $font_heading;
+		list-style-type: none;
+	}
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
+	}
+}
+
+.widget-title{
+	margin-top: .5em;
+	margin-bottom: .5em;
+	font-size: em(16px);
+	text-transform: uppercase;
+	
+}
+
+#secondary{
+	position:relative;
+	padding: 1.8em 1.4em 0;
+	background: $color__widgets-background;
+	@media screen and (min-width: 45em){
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 1.8em;
 	}
 }
