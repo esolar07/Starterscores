@@ -35,7 +35,7 @@ img{
 }
 
 
-.centered-image{
+.centered-image, .featured-image{
   max-width: calc(100% + 2.8em);
   margin: 1.5em -1.4em;
   // break point at 480px
@@ -46,5 +46,19 @@ img{
 }
 
 .featured-image{
-	
+	margin-top: -1.4em;
+	margin-bottom: 1.2em;
+	// break point at 480px
+	@media screen and (min-width: 30em){
+		margin-top: -1.8em;
+	}
+	// break point at 800px
+	@media screen and (min-width: 50em){
+		margin-top: 3em;
+	}
+	img{
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
