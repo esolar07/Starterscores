@@ -70,16 +70,9 @@
       margin-left: 0.8em;
       // break point at 1200px
       @media screen and (min-width: 50em) {
-		display: none;
         outline: 1px solid #333;
       }
-      li:last-child a{
-        @media screen and (min-width: 50em) {
-          border-bottom: 1px solid white;
-        }
-      }
 	  .toggled-on{
-        display: block;
 		// break point at 1200px
 		@media screen and (min-width: 50em) {
 			position: absolute;
@@ -89,9 +82,15 @@
 			z-index: 999;
 			background: #000;
         }
-		ul{
+		display: block;
+		& > ul{
 			display: block;
 		}
+	  }
+      li:last-child a{
+        @media screen and (min-width: 50em) {
+          border-bottom: 1px solid white;
+        }
       }
 
       ul{
@@ -106,9 +105,16 @@
           @media screen and (min-width: 50em) {
             position: relative;
           }
+		  & > ul{
+			display: block;
+		  }
         }
       }
     }
+	.toggled-on{
+        display: block;
+      }
+	
   }
 
 
@@ -186,6 +192,7 @@
 	  background-color: hsla(0, 0%, 0%, .7);
 	}
 	ul{
+		display: block;
 	  max-height: calc(100vh - 8em);
 	  overflow-y: auto;
 	  // break point at 1200px
@@ -297,9 +304,9 @@
     display: none;
   }
   // style added to menu bottom to hide when scrolling down
-	.hide{
+  .hide{
 	bottom: -2.5em !important;
-	}
+   }
 }
 
 

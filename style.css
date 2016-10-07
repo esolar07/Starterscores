@@ -553,11 +553,7 @@ a {
       margin-left: 0.8em; }
       @media screen and (min-width: 50em) {
         .main-navigation ul ul {
-          display: none;
           outline: 1px solid #333; } }
-      @media screen and (min-width: 50em) {
-        .main-navigation ul ul li:last-child a {
-          border-bottom: 1px solid white; } }
       .main-navigation ul ul .toggled-on {
         display: block; }
         @media screen and (min-width: 50em) {
@@ -568,14 +564,21 @@ a {
             width: 12em;
             z-index: 999;
             background: #000; } }
-        .main-navigation ul ul .toggled-on ul {
+        .main-navigation ul ul .toggled-on > ul {
           display: block; }
+      @media screen and (min-width: 50em) {
+        .main-navigation ul ul li:last-child a {
+          border-bottom: 1px solid white; } }
       @media screen and (min-width: 50em) {
         .main-navigation ul ul ul a {
           padding-left: 2em; } }
       @media screen and (min-width: 50em) {
         .main-navigation ul ul ul .toggled-on {
           position: relative; } }
+      .main-navigation ul ul ul .toggled-on > ul {
+        display: block; }
+    .main-navigation ul .toggled-on {
+      display: block; }
   .main-navigation li {
     position: relative;
     border-top: 1px solid #eaeaea;
@@ -627,6 +630,7 @@ a {
       background-color: #000;
       background-color: rgba(0, 0, 0, 0.7); } }
   .toggled ul {
+    display: block;
     max-height: calc(100vh - 8em);
     overflow-y: auto; }
     @media screen and (min-width: 50em) {
@@ -1171,7 +1175,7 @@ a {
       font-size: 90%; } }
 
 .comment .avatar {
-  position: relative;
+  position: absolute;
   top: -5px;
   left: -70px;
   width: 50px;
