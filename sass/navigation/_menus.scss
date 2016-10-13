@@ -1,283 +1,123 @@
-
-
-
+/*--------------------------------------------------------------
+## styles from 2016 theme menu
+--------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
-  display: block;
-  width: 100%;
-  font-family: $font_heading;
-  font-weight: 300;
-  font-size: em(16px);
-  // break point at 1200px
-  @media screen and (min-width: 50em) {
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 3.5em;
-    max-width: 58em;
-    min-height: 3.5em;
-    background-color: #000;
-    background-color: hsla(0, 0%, 0%, .7);
-  }
-
-  
-  
-  a {
-	position: relative;
-    display: block;
-    padding: 0.8em 1em;
-    text-decoration: none;
-    color: white;
-    font-weight: 400;
-  	line-height: 1.6em;
-    // break point at 1200px
-    @media screen and (min-width: 50em) {
-      border-bottom: none;
-    }
-    &:hover, &:focus {
-      background: #fff;
-      color: #000;
-      // break point at 1200px
-      @media screen and (min-width: 50em) {
-        background: transparent;
-        color: #fff;
-      	outline: solid 1px #b3b3b3;
-      }
-    }
-  }
-
-
-  ul {
-    display: none;
-    list-style: none;
-    margin-left: 0;
-    // break point at 1200px
-    @media screen and (min-width: 50em) {
-	  display: block;
-      padding-left: 0;
-      max-height: none;
-      text-align: center;
-    }
-	.toggled-on {
-      display: block;
-    }
-	li:last-child a {
-		border-bottom: none;
-	}
-
-    ul {
-      display: none;
-      margin-left: 0.8em;
-      // break point at 1200px
-      @media screen and (min-width: 50em) {
-        outline: 1px solid #333;
-      }
-	  .toggled-on{
-		// break point at 1200px
-		@media screen and (min-width: 50em) {
-			position: absolute;
-			display: block;
-			margin-left: 0;
-			width: 12em;
-			z-index: 999;
-			background: #000;
-        }
-		display: block;
-		& > ul{
-			display: block;
-		}
-	  }
-      li:last-child a{
-        @media screen and (min-width: 50em) {
-          border-bottom: 1px solid white;
-        }
-      }
-
-      ul{
-        a{
-          // break point at 1200px
-          @media screen and (min-width: 50em) {
-            padding-left: 2em;
-          }
-        }
-        .toggled-on{
-          // break point at 1200px
-          @media screen and (min-width: 50em) {
-            position: relative;
-          }
-		  & > ul{
-			display: block;
-		  }
-        }
-      }
-    }
-	.toggled-on{
-        display: block;
-      }
-	
-  }
-
-
-  li {
-	position: relative;
-	border-top: 1px solid #eaeaea;
-	border-top: 1px solid rgba(51, 51, 51, 0.1);
-    // break point at 1200px
-    @media screen and (min-width: 50em) {
-      // Display the menu items in a horizontal order
-      display: inline-block;
-	  border: none;
-    }
-    li{
-      // break point at 1200px
-      @media screen and (min-width: 50em) {
-        display: block;
-        text-align: left;
-      }
-      a:hover, a:focus {
-        // break point at 1200px
-        @media screen and (min-width: 50em) {
-          background: #eee;
-          color: #000;
-          text-decoration: none;
-        }
-      }
-    }
-
-  }
-
-
-  .current-menu-item > a, .current-menu-ancestor > a {
-    font-weight: 700;
-  }
-  .nav-menu {
-    & > ul {
-       & > li:first-child, & > li:first-child {
-      border-top: 0;
-		}
-    }
-  }
-  
-  .menu-item-description {
-    color: #707070;
-    color: rgba(51, 51, 51, 0.7);
-    font-family: "Noto Sans", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin-top: 0.5em;
-  }
+	clear: both;
+	display: block;
+	width: 100%;
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
 }
 
-/* adds spacing inbetween menu options text and dropdowns */
-.menu-item-has-children > a,  .page_item_has_children > a{
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin-left: 0;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation ul ul {
+	display: none;
+	margin-left: 0.8em;
+}
+
+.main-navigation a {
+	position: relative;
+	display: block;
+	padding: 0.8em 1em;
+	font-weight: 400;
+	text-decoration: none;
+	line-height: 1.6em;
+	color: white;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+	background: #fff;
+	color: #000;
+}
+
+.main-navigation a,
+.main-navigation ul ul li:lastchild a {
+	border-bottom: 1px solid white;
+}
+
+.main-navigation ul li:last-child a {
+	border-bottom: none;
+}
+
+.main-navigation ul .toggled-on {
+	display: block;
+}
+
+.main-navigation li {
+	border-top: 1px solid #eaeaea;
+	border-top: 1px solid rgba(51, 51, 51, 0.1);
+	position: relative;
+}
+
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a,
+.main-navigation .current_page_item > a,
+.main-navigation .current_page_ancestor > a {
+	font-weight: 700;
+}
+
+.main-navigation .nav-menu > ul > li:first-child,
+.main-navigation .nav-menu > li:first-child {
+	border-top: 0;
+}
+
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a{
 	padding-right: 48px;
 }
 
-/* mobile hover menu */
-.toggled {
-	position: fixed;
-	bottom: 0;
-	padding: 1em;
-	z-index: 999;
-	// break point at 1200px
-	@media screen and (min-width: 50em) {
-	  /* Position the menu in the header */
-	  position: relative;
-	  margin: 0 auto;
-	  padding: 0 3.5em;
-	  max-width: 58em;
-	  min-height: 3.5em;
-	  background-color: #000;
-	  background-color: hsla(0, 0%, 0%, .7);
-	}
-	ul{
-		display: block;
-	  max-height: calc(100vh - 8em);
-	  overflow-y: auto;
-	  // break point at 1200px
-	  @media screen and (min-width: 50em) {
-		padding-left: 0;
-		max-height: none;
-		text-align: center;
-		overflow-y: visible;
-	  }
-	  ul{
-		display: none;
-		.toggled-on, .toggled-on > ul{
-		  display: block;
-		}
-	  }
-	}
- }
-
-.nav-menu{
-  padding: 1em;
-  margin-bottom: 0em;
-  @media screen and (min-width: 50em) {
-    padding: .3em 0 0 0;
-    background-color: transparent;
-  }
-  ul{
-	background: black;
-	@media screen and (min-width: 50em) {
-		background-color: transparent;
-	}
-  }
-}
-
-
 .no-js .main-navigation ul ul {
-  display: block;
+	display: block;
 }
-
 
 .dropdown-toggle {
-  position: absolute;
-  top: 12px;
-  right: 6px;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  padding: 0;
-  height: 27px;
-  width: 27px;
-  font-family: 'FontAwesome';
-  color: #fff;
-  background-color: #000;
-  border: 1px solid #fff;
-  content: "";
-  /* Stop screen readers from reading the text as capital letters */
-  text-transform: lowercase;
-  // break point at 1200px
-  @media screen and (min-width: 50em) {
-    top: 11px;
-    right: 12px;
-    border: none;
-  }
-  &:after {
-    content: "\f078";
-	position: relative;
-    top: 0;
-    left: 1px;
-  	font-size: 14px;
-  	line-height: 27px;
-    width: 27px;
-    // break point at 1200px
-    @media screen and (min-width: 50em) {
-      line-height: 27px;
-      width: 27px;
-    }
-  }
-  &:hover, &:focus {
-    background-color: #fff;
-  	color: #000;
-  }
-  &.toggle-on:after {
-    content: "\f077";
-  }
+	position: absolute;
+	height: 27px;
+	width: 27px;
+	top: 12px;
+	right: 6px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	padding: 0;
+	font-family: 'FontAwesome';
+	background-color: #000;
+	border: 1px solid #fff;
+	content: "";
+	color: #fff;
+	text-transform: lowercase; /* Stop screen readers from reading the text as capital letters */
 }
 
+.dropdown-toggle:after {
+	content: "\f078";
+	font-size: 14px;
+	line-height: 27px;
+	position: relative;
+	top: 0;
+	left: 1px;
+	width: 27px;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	background-color: #fff;
+	color: #000;
+}
+
+.dropdown-toggle.toggle-on:after {
+	content: "\f077";
+}
 
 /* Small menu. */
 .menu-toggle,
@@ -285,30 +125,175 @@
 	display: block;
 }
 
-.menu-toggle{
-  position: fixed;
-  bottom: 1em;
-  left: 1em;
-  font-size: em(16px);
-  text-transform: uppercase;
-  color: #fff;
-  background: $color__small__menu;
-  border: solid 2px #fff;
-  z-index: 999;
-  transition: all ease-out 400ms;
-  &:hover, &:focus{
-	text-decoration: underline;
-  }
-  // break point at 1200px
-  @media screen and (min-width: 50em) {
-    display: none;
-  }
-  // style added to menu bottom to hide when scrolling down
-  .hide{
-	bottom: -2.5em !important;
-   }
+.menu-toggle {
+	position: fixed;
+	z-index: 100;
+	bottom: 1em;
+	left: 1em;
+	font-size: 1em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	border: solid 2px #fff;
+	transition: all ease-out 400ms;
 }
 
+.menu-toggle.hide {
+	bottom: -2.5em;
+}
+
+/* Make sure the button doesn't hide when menu is open. */
+
+.toggled .menu-toggle.hide {
+	bottom: 1em;
+}
+
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	text-decoration: underline;
+}
+
+@media screen and (min-width: 50em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+/* Hovering menu */
+
+.main-navigation.toggled {
+	position: fixed;
+	bottom: 0;
+	padding: 1em;
+	z-index: 1;
+}
+
+.nav-menu {
+	padding: 1em;
+	margin-bottom: 3em;
+	background-color: #000;
+}
+
+.main-navigation.toggled ul {
+	max-height: calc(100vh - 8em);
+	overflow-y: auto;
+}
+
+.main-navigation.toggled ul ul {
+	display: none;
+}
+
+.main-navigation.toggled ul ul.toggled-on,
+.main-navigation.toggled ul ul.toggled-on > ul {
+	display: block;
+}
+
+/* Horizontal menu on wide screens */
+@media screen and (min-width: 50em) {
+	
+	/* Position the menu in the header */
+	.main-navigation,
+	.main-navigation.toggled {
+		position: relative;
+		min-height: 3.5em;
+		max-width: 58em;
+		margin: 0 auto;
+		padding: 0 3.5em;
+		background-color: #000;
+		background-color: hsla(0, 0%, 0%, .7);
+	}
+	
+	.nav-menu {
+		padding: .3em 0 0 0;
+		background-color: transparent;
+	}
+	
+	.main-navigation ul,
+	.main-navigation.toggled ul {
+		max-height: none;
+		padding-left: 0;
+		text-align: center;
+	}
+	
+	.main-navigation.toggled ul {
+		overflow-y: visible;
+	}
+	
+	/* Display the menu items in a horizontal order */
+	.main-navigation li {
+		display: inline-block;
+		border: none;
+	}
+	
+	/* Add an outline to the drop-down menus */
+	.main-navigation ul ul {
+		outline: 1px solid #333;
+	}
+	
+	/* Left-align drop-down menu items */
+	.main-navigation li li {
+		display: block;
+		text-align: left;
+	}
+	
+	.main-navigation a,
+	.main-navigation ul ul li:last-child a {
+		border-bottom: none;
+	}
+	
+	/* Add an outline on hovered and focused menu items */
+	.main-navigation a:hover,
+	.main-navigation a:focus {
+		background: transparent;
+		color: #fff;
+		text-decoration: underline;
+		outline: solid 1px #b3b3b3;
+	}
+	
+	/* Create hover and focus contrast on drop-down items */
+	.main-navigation li li a:hover,
+	.main-navigation li li a:focus {
+		background: #eee;
+		color: #000;
+		text-decoration: none;
+	}
+	
+	/* Position drop-down menus absolutely */
+	.main-navigation ul ul.toggled-on {
+		position: absolute;
+		width: 12em;
+		display: block;
+		z-index: 10;
+		margin-left: 0;
+		background: #000;
+	}
+	
+	.main-navigation ul ul ul.toggled-on {
+		position: relative;
+	}
+	
+	/* Indent 3rd level drop-down menus */
+	.main-navigation ul ul ul a {
+		padding-left: 2em;
+	}
+	
+	/* Simplify the drop-down toggle */
+	.dropdown-toggle {
+		top: 11px;
+		right: 12px;
+		border: none;
+	}
+	
+	.dropdown-toggle::after {
+		line-height: 27px;
+		width: 27px;
+	}
+	
+}
 
 
 

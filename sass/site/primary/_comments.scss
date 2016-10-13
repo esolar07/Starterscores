@@ -80,4 +80,60 @@
 }
 .bypostauthor {
 	display: block;
+	.avatar{
+		boxsizing: content-box;
+		border: 5px solid #c3c3c3;
+		margin-top: -5px;
+		margin-left: -5px;
+	}
 }
+
+/* Comment Form */
+
+.comment-form{
+	font-family: $font_comment_forms;
+	line-height: 1.3em;
+	a{
+		font-weight: 500;
+	}
+	label{
+		display:block;
+		padding-bottom: .4em;
+		font-style: italic;
+	}
+	.form-submit{
+		margin-top: 3em;
+		input{
+			padding: .5em 1.4em;
+			font-size: 85%;
+			color: #333;
+			text-decoration: none;
+			line-height: 1.3em;
+			border: 1px solid #c3c3c3;
+			&:hover, &:focus{
+				color: #fff;
+				background: #000;
+				border-color: #000;
+			}
+		}
+	}
+	.required{
+		color: $color_comment_form_required;
+	}
+}
+
+.comment-respond::after {
+	content: "";
+ 	display: block;
+ 	margin: 2em auto 4em;
+ 	width: 5em;
+ 	border-bottom: 1px solid #c3c3c3;
+ }
+ 
+ .comment-reply-title {
+ 	margin-bottom: 1em;
+	text-align: center;
+ }
+.comment-list .comment-reply-title {
+	text-align: left;
+ }
