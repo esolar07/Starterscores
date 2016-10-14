@@ -1,100 +1,1444 @@
-/*
-Error: Undefined variable: "$font_comment_forms".
-        on line 94 of sass/site/primary/_comments.scss
-        from line 22 of sass/site/_site.scss
-        from line 104 of sass/style.scss
+/*!
+Theme Name: Starterscores
+Theme URI: http://eddiesolar.com/
+Author: Eddie Solar
+Author URI: http://eddiesolar.com/
+Description: Starter theme built on Underscores
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: starterscores
+Tags:
 
-89: @import "modules/clearings";
-90: 
-91: /*--------------------------------------------------------------
-92: # Header
-93: --------------------------------------------------------------*\/
-94: @import "modules/header";
-95: 
-96: /*--------------------------------------------------------------
-97: # Widgets
-98: --------------------------------------------------------------*\/
-99: @import "site/secondary/widgets";
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
 
-Backtrace:
-sass/site/primary/_comments.scss:94
-sass/site/_site.scss:22
-sass/style.scss:104
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+Starterscores is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$font_comment_forms\".\A         on line 94 of sass/site/primary/_comments.scss\A         from line 22 of sass/site/_site.scss\A         from line 104 of sass/style.scss\A \A 89: @import \"modules/clearings\";\A 90: \A 91: /*--------------------------------------------------------------\A 92: # Header\A 93: --------------------------------------------------------------*/\A 94: @import \"modules/header\";\A 95: \A 96: /*--------------------------------------------------------------\A 97: # Widgets\A 98: --------------------------------------------------------------*/\A 99: @import \"site/secondary/widgets\";"; }
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Header
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+# Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  color: #000;
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.site-content {
+  font-size: 1.125em;
+  line-height: 1.6em; }
+
+h1 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.3em;
+  clear: both;
+  font-size: 1.625em; }
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.3em;
+  clear: both;
+  font-size: 1.5em; }
+
+h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.3em;
+  clear: both;
+  font-size: 1.375em; }
+
+h4 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.3em;
+  clear: both;
+  font-size: 1.25em; }
+
+h5 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.3em;
+  clear: both;
+  font-size: 1.125em; }
+
+h6 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.3em;
+  clear: both;
+  font-size: 1em; }
+
+p {
+  margin-bottom: 1.5em; }
+
+dfn, cite, em, i {
+  font-style: italic; }
+
+blockquote {
+  margin: 0 1.5em; }
+
+address {
+  margin: 0 0 1.5em; }
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em; }
+
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help; }
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none; }
+
+big {
+  font-size: 125%; }
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit; }
+
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */ }
+
+blockquote, q {
+  quotes: "" ""; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: ""; }
+
+blockquote {
+  position: relative;
+  margin: 1.5em 0 1.5em 2em;
+  font-size: 1.5em;
+  line-height: 1.4em; }
+  blockquote:before {
+    content: "\f10d";
+    position: absolute;
+    left: -2em;
+    font-family: 'FontAwesome';
+    color: #ededed; }
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    text-decoration: underline; }
+  a:focus {
+    text-decoration: underline; }
+
+ul, ol {
+  margin: 0 0 1.5em 3em; }
+
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin: 0 1.5em 1.5em; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%; }
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  padding: .6em 1em .4em;
+  border: 3px solid;
+  border-color: #000;
+  border-radius: 0;
+  background: #fff;
+  font-family: "Fira Sans", sans-serif;
+  color: #000;
+  font-size: 0.75em;
+  line-height: 1;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    border-color: #000;
+    color: #fff; }
+  button:active, button:focus,
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="reset"]:active,
+  input[type="reset"]:focus,
+  input[type="submit"]:active,
+  input[type="submit"]:focus {
+    border-color: #000;
+    color: #fff; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="range"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="time"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="color"]:focus,
+  textarea:focus {
+    color: #111; }
+
+select {
+  border: 1px solid #ccc; }
+
+textarea {
+  width: 100%; }
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  color: #000; }
+  a:visited {
+    color: #000; }
+  a:hover, a:focus, a:active {
+    color: #000; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## styles from 2016 theme menu
+--------------------------------------------------------------*/
+.main-navigation {
+  clear: both;
+  display: block;
+  width: 100%;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1em; }
+
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  margin-left: 0; }
+
+.main-navigation li {
+  position: relative; }
+
+.main-navigation ul ul {
+  display: none;
+  margin-left: 0.8em; }
+
+.main-navigation a {
+  position: relative;
+  display: block;
+  padding: 0.8em 1em;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1.6em;
+  color: white; }
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+  background: #fff;
+  color: #000; }
+
+.main-navigation a,
+.main-navigation ul ul li:lastchild a {
+  border-bottom: 1px solid white; }
+
+.main-navigation ul li:last-child a {
+  border-bottom: none; }
+
+.main-navigation ul .toggled-on {
+  display: block; }
+
+.main-navigation li {
+  border-top: 1px solid #eaeaea;
+  border-top: 1px solid rgba(51, 51, 51, 0.1);
+  position: relative; }
+
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a,
+.main-navigation .current_page_item > a,
+.main-navigation .current_page_ancestor > a {
+  font-weight: 700; }
+
+.main-navigation .nav-menu > ul > li:first-child,
+.main-navigation .nav-menu > li:first-child {
+  border-top: 0; }
+
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a {
+  padding-right: 48px; }
+
+.no-js .main-navigation ul ul {
+  display: block; }
+
+.dropdown-toggle {
+  position: absolute;
+  height: 27px;
+  width: 27px;
+  top: 12px;
+  right: 6px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 0;
+  font-family: 'FontAwesome';
+  background-color: #000;
+  border: 1px solid #fff;
+  content: "";
+  color: #fff;
+  text-transform: lowercase;
+  /* Stop screen readers from reading the text as capital letters */ }
+
+.dropdown-toggle:after {
+  content: "\f078";
+  font-size: 14px;
+  line-height: 27px;
+  position: relative;
+  top: 0;
+  left: 1px;
+  width: 27px; }
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  background-color: #fff;
+  color: #000; }
+
+.dropdown-toggle.toggle-on:after {
+  content: "\f077"; }
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block; }
+
+.menu-toggle {
+  position: fixed;
+  z-index: 100;
+  bottom: 1em;
+  left: 1em;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  border: solid 2px #fff;
+  transition: all ease-out 400ms; }
+
+.menu-toggle.hide {
+  bottom: -2.5em; }
+
+/* Make sure the button doesn't hide when menu is open. */
+.toggled .menu-toggle.hide {
+  bottom: 1em; }
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  text-decoration: underline; }
+
+@media screen and (min-width: 50em) {
+  .menu-toggle {
+    display: none; }
+
+  .main-navigation ul {
+    display: block; } }
+/* Hovering menu */
+.main-navigation.toggled {
+  position: fixed;
+  bottom: 0;
+  padding: 1em;
+  z-index: 1; }
+
+.nav-menu {
+  padding: 1em;
+  margin-bottom: 3em;
+  background-color: #000; }
+
+.main-navigation.toggled ul {
+  max-height: calc(100vh - 8em);
+  overflow-y: auto; }
+
+.main-navigation.toggled ul ul {
+  display: none; }
+
+.main-navigation.toggled ul ul.toggled-on,
+.main-navigation.toggled ul ul.toggled-on > ul {
+  display: block; }
+
+/* Horizontal menu on wide screens */
+@media screen and (min-width: 50em) {
+  /* Position the menu in the header */
+  .main-navigation,
+  .main-navigation.toggled {
+    position: relative;
+    min-height: 3.5em;
+    max-width: 58em;
+    margin: 0 auto;
+    padding: 0 3.5em;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.7); }
+
+  .nav-menu {
+    padding: .3em 0 0 0;
+    background-color: transparent; }
+
+  .main-navigation ul,
+  .main-navigation.toggled ul {
+    max-height: none;
+    padding-left: 0;
+    text-align: center; }
+
+  .main-navigation.toggled ul {
+    overflow-y: visible; }
+
+  /* Display the menu items in a horizontal order */
+  .main-navigation li {
+    display: inline-block;
+    border: none; }
+
+  /* Add an outline to the drop-down menus */
+  .main-navigation ul ul {
+    outline: 1px solid #333; }
+
+  /* Left-align drop-down menu items */
+  .main-navigation li li {
+    display: block;
+    text-align: left; }
+
+  .main-navigation a,
+  .main-navigation ul ul li:last-child a {
+    border-bottom: none; }
+
+  /* Add an outline on hovered and focused menu items */
+  .main-navigation a:hover,
+  .main-navigation a:focus {
+    background: transparent;
+    color: #fff;
+    text-decoration: underline;
+    outline: solid 1px #b3b3b3; }
+
+  /* Create hover and focus contrast on drop-down items */
+  .main-navigation li li a:hover,
+  .main-navigation li li a:focus {
+    background: #eee;
+    color: #000;
+    text-decoration: none; }
+
+  /* Position drop-down menus absolutely */
+  .main-navigation ul ul.toggled-on {
+    position: absolute;
+    width: 12em;
+    display: block;
+    z-index: 10;
+    margin-left: 0;
+    background: #000; }
+
+  .main-navigation ul ul ul.toggled-on {
+    position: relative; }
+
+  /* Indent 3rd level drop-down menus */
+  .main-navigation ul ul ul a {
+    padding-left: 2em; }
+
+  /* Simplify the drop-down toggle */
+  .dropdown-toggle {
+    top: 11px;
+    right: 12px;
+    border: none; }
+
+  .dropdown-toggle::after {
+    line-height: 27px;
+    width: 27px; } }
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
+/*--------------------------------------------------------------
+## Other Navigation
+--------------------------------------------------------------*/
+.post-navigation, comment-navigation {
+  padding: 2em 0;
+  font-family: "Fira Sans", sans-serif;
+  text-align: left;
+  overflow: hidden; }
+  @media screen and (min-width: 50em) {
+    .post-navigation, comment-navigation {
+      padding: 2em 3em; } }
+  .post-navigation a, comment-navigation a {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    border: 1px solid #c3c3c3;
+    text-decoration: none; }
+    .post-navigation a:hover, .post-navigation a:focus, comment-navigation a:hover, comment-navigation a:focus {
+      border-color: #000000; }
+      .post-navigation a:hover .post-title, .post-navigation a:focus .post-title, comment-navigation a:hover .post-title, comment-navigation a:focus .post-title {
+        text-decoration: underline; }
+  .post-navigation .post-title, comment-navigation .post-title {
+    font-size: 1.1875em;
+    font-weight: 700; }
+  @media screen and (min-width: 30em) {
+    .post-navigation .nav-previous, comment-navigation .nav-previous {
+      display: flex;
+      align-items: stretch;
+      float: left;
+      width: 48%; } }
+  @media screen and (min-width: 30em) {
+    .post-navigation .nav-previous .nav-next, comment-navigation .nav-previous .nav-next {
+      display: flex;
+      align-items: stretch;
+      float: right;
+      width: 48%;
+      text-align: right; } }
+
+.nav-links {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 .4em; }
+  @media screen and (min-width: 30em) {
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 0; } }
+
+.nav-previous {
+  padding-bottom: 1em; }
+  @media screen and (min-width: 30em) {
+    .nav-previous {
+      padding-bottom: 0; } }
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0; }
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em; }
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em; }
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed; }
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both; }
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+  background: #000;
+  background-size: cover; }
+  @media screen and (min-width: 50em) {
+    .site-header {
+      min-height: 4em; } }
+  .site-header .site-branding {
+    text-align: center; }
+    .site-header .site-branding .site-title {
+      margin: 1.7em 1em 0;
+      font-family: "Fira Sans", sans-serif;
+      font-size: 1.625em;
+      font-weight: bold;
+      line-height: 1.3em;
+      color: #fff;
+      text-transform: uppercase;
+      word-break: break-word; }
+      .site-header .site-branding .site-title a {
+        color: inherit; }
+      @media screen and (min-width: 30em) {
+        .site-header .site-branding .site-title {
+          font-size: 2em; } }
+      .site-header .site-branding .site-title :after {
+        content: '';
+        display: block;
+        margin-top: .7em;
+        margin-right: auto;
+        margin-left: auto;
+        width: 50%;
+        border-bottom: solid 1px white;
+        opacity: .5; }
+    .site-header .site-branding .site-description {
+      margin: 2em 2em 3em;
+      font-size: 110%;
+      color: #fff; }
+
+.site-logo {
+  position: relative; }
+  .site-logo a {
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 2em;
+    height: 2em;
+    color: white;
+    text-decoration: none;
+    background: black;
+    border: 2px solid white;
+    z-index: 999; }
+    .site-logo a:hover, .site-logo a:focus {
+      outline: 2px solid white; }
+      .site-logo a:hover .site-firstletter, .site-logo a:focus .site-firstletter {
+        background: white;
+        color: black; }
+
+.site-firstletter {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3em;
+  text-transform: capitalize; }
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  padding: 1.8em;
+  background: #fff;
+  /* Make sure select elements fit in widgets. */ }
+  @media screen and (min-width: 45em) {
+    .widget {
+      float: left;
+      margin: 0 .9em 1.8em;
+      width: 300px; } }
+  .widget ul, .widget ol {
+    margin: 0;
+    padding: .7em 0 0;
+    font-family: "Fira Sans", sans-serif;
+    list-style-type: none; }
+  .widget select {
+    max-width: 100%; }
+
+.widget-title {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  font-size: 1em;
+  text-transform: uppercase; }
+
+#secondary {
+  position: relative;
+  padding: 1.8em 1.4em 0;
+  background: #ededed; }
+  @media screen and (min-width: 45em) {
+    #secondary {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1.8em; } }
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Global
+--------------------------------------------------------------*/
+.content-area {
+  overflow-x: hidden; }
+
+.site-main {
+  margin: 1.4em;
+  font-size: 0.9em;
+  line-height: 1.6em; }
+  @media screen and (min-width: 30em) {
+    .site-main {
+      margin: 1.8em; } }
+  @media screen and (min-width: 40em) {
+    .site-main {
+      font-size: 1em; } }
+  @media screen and (min-width: 57em) {
+    .site-main {
+      margin: 1.8em auto;
+      max-width: 45em; } }
+
+.page-header::after {
+  content: "";
+  display: block;
+  margin: 2em auto;
+  width: 3.5em;
+  border-bottom: 1px solid #c3c3c3; }
+
+.page-title {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.4em; }
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block; }
+
+.hentry {
+  margin: 0 0 1.5em;
+  padding-bottom: 2em; }
+
+.deck {
+  margin-bottom: 2.5em; }
+  .deck p {
+    text-align: center;
+    font-size: 1.1875em;
+    line-height: 1.5em;
+    font-weight: 600; }
+
+.entry-meta {
+  margin-right: -1.473684210526316em;
+  margin-left: -1.473684210526316em;
+  padding: 2em 1.473684210526316em;
+  font-family: "Fira Sans", sans-serif, sans-serif;
+  font-size: 95%;
+  font-style: italic;
+  text-align: center;
+  background: #eee; }
+  @media screen and (min-width: 30em) {
+    .entry-meta {
+      margin-right: -1.894736842105263em;
+      margin-left: -1.894736842105263em; } }
+  @media screen and (min-width: 57em) {
+    .entry-meta {
+      position: relative;
+      width: 100%;
+      width: 100vw;
+      left: 0;
+      left: calc((-100vw + 52.2em) / 2);
+      overflow: hidden; } }
+  .entry-meta a {
+    text-decoration: none; }
+
+.entry-content a, .entry-summary a {
+  text-decoration: none;
+  border-bottom: 2px solid #c3c3c3; }
+  .entry-content a:hover, .entry-summary a:hover {
+    border-bottom: 3px solid #c3c3c3;
+    box-shadow: inset 0 -3px 0 #c3c3c3; }
+  .entry-content a:focus, .entry-summary a:focus {
+    border-bottom: 3px solid #c3c3c3;
+    box-shadow: inset 0 -3px 0 #c3c3c3; }
+
+.entry-footer a {
+  text-decoration: none; }
+  .entry-footer a:hover {
+    border-bottom: 2px solid #000; }
+  .entry-footer a:focus {
+    border-bottom: 2px solid #000; }
+
+.entry-title {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-align: center;
+  color: #000;
+  line-height: 1.3em;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
+  .entry-title a {
+    color: inherit;
+    text-decoration: none; }
+    .entry-title a:hover {
+      text-decoration: underline; }
+    .entry-title a:focus {
+      text-decoration: underline; }
+  @media screen and (min-width: 40em) {
+    .entry-title {
+      margin-top: 1.5em;
+      font-size: 2.8em;
+      line-height: 1.3em; } }
+
+@media screen and (min-width: 50em) {
+  .has-avatar {
+    display: inline-block;
+    width: 20em;
+    text-align: left; } }
+
+.author-avatar {
+  margin-right: auto;
+  margin-bottom: 1em;
+  margin-left: auto;
+  height: 50px;
+  width: 50px; }
+  @media screen and (min-width: 50em) {
+    .author-avatar {
+      float: left;
+      margin-right: 1.5em;
+      margin-bottom: 0;
+      height: 70px;
+      width: 70px; } }
+  .author-avatar img {
+    border-radius: 50%; }
+
+.byline, .posted-on, .entry-meta .comment-link {
+  display: block;
+  padding: 0; }
+
+.byline,
+.updated:not(.published) {
+  display: none; }
+
+.single .byline,
+.group-blog .byline {
+  display: inline; }
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0; }
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none; }
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comments-area {
+  margin: 4em 0; }
+  @media screen and (min-width: 40em) {
+    .comments-area {
+      margin: 4em 1em; } }
+  @media screen and (min-width: 50em) {
+    .comments-area {
+      margin: 4em 3em; } }
+
+.comments-title {
+  margin-bottom: 2em;
+  font-size: 2em;
+  text-align: center; }
+
+.comment-list {
+  margin: 0;
+  padding: 0; }
+  .comment-list ol {
+    list-style-type: none; }
+
+.comment-body {
+  margin-bottom: 3em;
+  border-bottom: 3em; }
+
+.comment-meta {
+  position: relative;
+  margin-left: 70px;
+  font-family: "Fira Sans", sans-serif;
+  font-style: italic;
+  font-size: 80%; }
+  @media screen and (min-width: 30em) {
+    .comment-meta {
+      margin-left: 80px;
+      font-size: 90%; } }
+
+.comment .avatar {
+  position: absolute;
+  top: -5px;
+  left: -70px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px; }
+  @media screen and (min-width: 30em) {
+    .comment .avatar {
+      top: -7px;
+      left: -80px;
+      width: 60px;
+      height: 60px; } }
+
+.children {
+  margin-left: 1em;
+  padding-left: 0; }
+  @media screen and (min-width: 30em) {
+    .children {
+      margin-left: 2em; } }
+  @media screen and (min-width: 50em) {
+    .children {
+      margin-left: 3em; } }
+
+.comment-content a {
+  word-wrap: break-word; }
+  @media screen and (min-width: 30em) {
+    .comment-content a {
+      margin-left: 80px; } }
+
+.bypostauthor {
+  display: block; }
+  .bypostauthor .avatar {
+    boxsizing: content-box;
+    border: 5px solid #c3c3c3;
+    margin-top: -5px;
+    margin-left: -5px; }
+
+/* Comment Form */
+.comment-form {
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.3em; }
+  .comment-form a {
+    font-weight: 500; }
+  .comment-form label {
+    display: block;
+    padding-bottom: .4em;
+    font-style: italic; }
+  .comment-form .form-submit {
+    margin-top: 3em; }
+    .comment-form .form-submit input {
+      padding: .5em 1.4em;
+      font-size: 85%;
+      color: #333;
+      text-decoration: none;
+      line-height: 1.3em;
+      border: 1px solid #c3c3c3; }
+      .comment-form .form-submit input:hover, .comment-form .form-submit input:focus {
+        color: #fff;
+        background: #000;
+        border-color: #000; }
+  .comment-form .required {
+    color: #D54E21; }
+
+.comment-respond::after {
+  content: "";
+  display: block;
+  margin: 2em auto 4em;
+  width: 5em;
+  border-bottom: 1px solid #c3c3c3; }
+
+.comment-reply-title {
+  margin-bottom: 1em;
+  text-align: center; }
+
+.comment-list .comment-reply-title {
+  text-align: left; }
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none; }
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  font-family: "Fira Sans", sans-serif;
+  font-style: italic; }
+  .wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .wp-caption .wp-caption-text {
+    margin: 0.8075em 0; }
+  .wp-caption .aligncenter {
+    margin-top: 2em;
+    margin-bottom: 2em; }
+  .wp-caption .alignright, .wp-caption .alignleft {
+    margin-top: 0;
+    margin-bottom: 1.5em; }
+
+.wp-caption-text {
+  text-align: center; }
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em 0; }
+
+.gallery-item {
+  display: inline-block;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  vertical-align: top; }
+  .gallery-item img {
+    display: block; }
+  .gallery-item a {
+    display: inline-block;
+    border-bottom: none; }
+    .gallery-item a:hover, .gallery-item a:focus {
+      border-bottom: none;
+      box-shadow: none; }
+      .gallery-item a:hover img, .gallery-item a:focus img {
+        border-color: #c3c3c3; }
+    .gallery-item a img {
+      margin: 0 auto;
+      padding: .5em;
+      border: 1px solid #fff; }
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+
+.gallery-caption {
+  display: block; }
+
+/*--------------------------------------------------------------
+## Images
+--------------------------------------------------------------*/
+img .aligncenter {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+img .alignright {
+  margin-bottom: 1.5em; }
+  @media screen and (min-width: 50em) {
+    img .alignright {
+      margin-right: -1.5em; } }
+img .alignleft {
+  margin-bottom: 1.5em; }
+  @media screen and (min-width: 50em) {
+    img .alignleft {
+      margin-left: -1.5em; } }
+
+@media screen and (min-width: 50em) {
+  .wp-caption .alignright {
+    margin-right: -15em; } }
+@media screen and (min-width: 50em) {
+  .wp-caption .alignleft {
+    margin-left: -1.5em; } }
+
+.centered-image, .featured-image {
+  max-width: calc(100% + 2.8em);
+  margin: 1.5em -1.4em; }
+  @media screen and (min-width: 30em) {
+    .centered-image, .featured-image {
+      max-width: calc(100% + 3.6em);
+      margin: 1.5em -1.8em; } }
+
+.featured-image {
+  margin-top: -1.4em;
+  margin-bottom: 1.2em; }
+  @media screen and (min-width: 30em) {
+    .featured-image {
+      margin-top: -1.8em; } }
+  @media screen and (min-width: 50em) {
+    .featured-image {
+      margin-top: 3em; } }
+  .featured-image img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto; }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+  padding: 6em 1em;
+  font-family: "Fira Sans", sans-serif;
+  text-align: center;
+  color: white;
+  background: black; }
+  .site-footer a {
+    color: white; }
+
+/*# sourceMappingURL=style.css.map */
