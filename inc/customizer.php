@@ -15,6 +15,7 @@ function starterscores_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	
+	//customizer setting for header color
 	$wp_customize->add_setting( 'header_color', array(
 		'default' => '#000000',
 		'type' => 'theme_mod',
@@ -22,15 +23,53 @@ function starterscores_customize_register( $wp_customize ) {
 		'transport' => 'postMessage',
 	));
 	
+	//customizer control for header color
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
 			'header_color', array(
-				'label' => _('Header Background Color', 'starterscores'),
+				'label' => __('Header Background Color', 'starterscores'),
 				'section' => 'colors'
 			)
 		)
 	);
+	
+	//customizer new section
+	$wp_customize->add_section( 'starterscores-options', array(
+		'title' => __( 'Theme Options', 'starterscores' ),
+		'capability' => 'edit_theme_options',
+		'description' => __( 'Change the default display options for the theme.', 'starterscores' ),
+	));
+	
+	
+	//customizer setting for sidebar
+	
+	$wp_customize->add_setting(	'layout_setting',
+		array(
+			'default' => 'no-sidebar',
+			'type' => 'theme_mod',
+			'sanitize_callback' => 'starterscores_sanitize_layout', 
+			'transport' => 'postMessage'
+		)
+	);
+	
+	
+	//customizer control for sidebar
+	// Add sidebar layout controls
+	$wp_customize->add_control(	'layout_control',
+		array(
+			'settings' => 'layout_setting',
+			'type' => 'radio',
+			'label' => __( 'Sidebar position', 'starterscores' ),
+			'choices' => array(
+				'no-sidebar' => __( 'No sidebar (default)', 'starterscores' ),
+				'sidebar-left' => __( 'Left sidebar', 'starterscores' ),
+				'sidebar-right' => __( 'Right sidebar', 'starterscores' )
+			),
+			'section' => 'starterscores-options',
+		)
+	);
+	
 }
 add_action( 'customize_register', 'starterscores_customize_register' );
 
@@ -42,11 +81,23 @@ function starterscores_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'starterscores_customize_preview_js' );
 
+
+/**
+* sanitize layout options
+*/
+function starterscores_sanitize_layout ($value){
+	if (!in_array( $value, array('sidebar-left', 'sidebar-right', 'no-sidebar'))){
+		$value = 'no-sidebar';
+	}
+	return $value;
+}
+
+
 /**
 * injects color from header customizer 
- */
+*/
 function starterscores_customizer_css(){
-	$header_color = get_theme_mod('header_color', );
+	$header_color = get_theme_mod('header_color');
 	?>
 	<style type="text/css">
 		.site-header{

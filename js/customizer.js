@@ -49,4 +49,12 @@
 		} );
 	} );
 	
+	// custom layout options
+	wp.customize( 'layout-setting', function( value ) {
+		value.bind( function( to ) {
+			$('#page').removeClass('no-sidebar sidebar-right sidebar-left');
+			$('#page').addClass( to);
+		} );
+	} );
+	
 } )( jQuery );
