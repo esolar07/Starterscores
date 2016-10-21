@@ -192,3 +192,13 @@ function starterscorees_validate_gravatar($id_or_email) {
 		return false;
 	}
 }
+
+
+/**
+ * customize excerpt read more on posts
+ */
+function starterscores_excerpt_more($more){
+	return "...";
+}
+
+add_filter('excerpt_more', "starterscores_excerpt_more");

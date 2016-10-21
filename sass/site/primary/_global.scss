@@ -121,6 +121,8 @@
   }
 }
 
+
+
 .page-header::after{
 	content: "";
 	display:block;
@@ -134,4 +136,14 @@
 	text-align:center;
 	font-style: italic;
 	font-size: em(22.4px); //1.4em
+}
+
+.entry-title .index-excerpt{
+	margin-top: 2em;
+	margin-bottom: .5em;
+	font-size: 1.5em;
+}
+
+.entry-header .index-entry-meta{
+	font-size: .8em;
 }

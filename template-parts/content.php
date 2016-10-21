@@ -11,6 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		<!-- display featured image if it has one -->
 		<?php if( has_post_thumbnail() ) { ?>
 				<figure class='featured-image'>
@@ -35,16 +36,13 @@
 
 	<div class="entry-content">
 		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'starterscores' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+		
+			the_excerpt();
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'starterscores' ),
-				'after'  => '</div>',
-			) );
+	//		wp_link_pages( array(
+	//			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'starterscores' ),
+	//			'after'  => '</div>',
+	//		) );
 		?>
 	</div><!-- .entry-content -->
 
