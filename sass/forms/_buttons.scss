@@ -24,3 +24,45 @@ input[type="submit"] {
 		color: #fff;
 	}
 }
+
+
+.continue-reading{
+	text-align:center;
+	&:after{
+		content: "";
+		display: block;
+		margin: 4em auto 0;
+		width: 7em;
+		border-bottom: 1px solid #c3c3c3;
+	}
+	a{
+		display: inline-block;
+		margin: 1em auto;
+		padding: 1em 2em;
+		font-family: $font_read-more;
+		text-decoration: none;
+		border: 1px solid #c3c3c3;
+		&:after{
+			content: "...";
+		}
+		&:hover, &:focus{
+			border-color: #000;
+			border-width: 1px;
+			box-shadow: none;
+		}
+	}
+}
+
+.entry-content .continue-reading a{
+	display: inline-block;
+	margin: 1em auto;
+	padding: 1em 2em;
+	font-family: $font_read-more;
+	text-decoration: none;
+	border: 1px solid #c3c3c3;
+	&:hover, &:focus{
+		border-color: #000;
+		border-width: 1px;
+		box-shadow: none;
+	}
+}

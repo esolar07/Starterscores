@@ -56,9 +56,15 @@ img{
 	@media screen and (min-width: 50em){
 		margin-top: 3em;
 	}
+	a:hover, a:focus{
+		img{
+			outline: dotted;
+		}
+	}
 	img{
 		display: block;
 		margin-right: auto;
 		margin-left: auto;
 	}
 }
+

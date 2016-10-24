@@ -12,6 +12,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">	
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<!-- display featured image if it has one -->
+		<?php if( has_post_thumbnail() ) { ?>
+				<figure class='featured-image'>
+					<a href= '<?php echo esc_url( get_permalink() ); ?>' rel='bookmark'>
+						<?php the_post_thumbnail(); ?>
+					</a>
+				</figure>
+		<?php } ?>
 	</header><!-- .entry-header -->
 
 	<?php

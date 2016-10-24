@@ -434,6 +434,40 @@ input[type="submit"] {
     border-color: #000;
     color: #fff; }
 
+.continue-reading {
+  text-align: center; }
+  .continue-reading:after {
+    content: "";
+    display: block;
+    margin: 4em auto 0;
+    width: 7em;
+    border-bottom: 1px solid #c3c3c3; }
+  .continue-reading a {
+    display: inline-block;
+    margin: 1em auto;
+    padding: 1em 2em;
+    font-family: "Fira Sans", sans-serif;
+    text-decoration: none;
+    border: 1px solid #c3c3c3; }
+    .continue-reading a:after {
+      content: "..."; }
+    .continue-reading a:hover, .continue-reading a:focus {
+      border-color: #000;
+      border-width: 1px;
+      box-shadow: none; }
+
+.entry-content .continue-reading a {
+  display: inline-block;
+  margin: 1em auto;
+  padding: 1em 2em;
+  font-family: "Fira Sans", sans-serif;
+  text-decoration: none;
+  border: 1px solid #c3c3c3; }
+  .entry-content .continue-reading a:hover, .entry-content .continue-reading a:focus {
+    border-color: #000;
+    border-width: 1px;
+    box-shadow: none; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -1495,6 +1529,8 @@ img .alignleft {
   @media screen and (min-width: 50em) {
     .featured-image {
       margin-top: 3em; } }
+  .featured-image a:hover img, .featured-image a:focus img {
+    outline: dotted; }
   .featured-image img {
     display: block;
     margin-right: auto;
